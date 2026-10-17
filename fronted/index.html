@@ -23,6 +23,16 @@
         />
         <button type="submit" id="submitBtn">Check Health</button>
       </form>
+      <div class="controls-row">
+        <label class="auto-refresh-control" for="autoRefresh">
+          <input type="checkbox" id="autoRefresh">
+          <span>Auto-refresh every 30s</span>
+        </label>
+      </div>
+      <section id="recentSearches" class="recent-searches hidden" aria-label="Recent searches">
+        <h2>Recent searches</h2>
+        <div id="recentSearchChips" class="recent-search-chips"></div>
+      </section>
       <p id="inputError" class="error-message hidden" role="alert"></p>
 
       <div id="resultCard" class="card hidden">

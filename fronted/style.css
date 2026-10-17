@@ -43,7 +43,7 @@ header p {
 form {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 input[type="text"] {
@@ -74,6 +74,68 @@ button {
 
 button:hover {
   background: #7dd3fc;
+}
+
+.controls-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.auto-refresh-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.auto-refresh-control input {
+  width: 16px;
+  height: 16px;
+  accent-color: #38bdf8;
+  cursor: pointer;
+}
+
+.recent-searches {
+  margin: 0 0 20px;
+}
+
+.recent-searches.hidden {
+  display: none;
+}
+
+.recent-searches h2 {
+  margin-bottom: 10px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.recent-search-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.search-chip {
+  max-width: 100%;
+  padding: 7px 10px;
+  overflow: hidden;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #bae6fd;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-chip:hover {
+  border-color: #38bdf8;
+  background: #172554;
 }
 
 .error-message {

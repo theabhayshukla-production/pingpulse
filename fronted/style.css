@@ -188,3 +188,75 @@ button:hover {
   color: #cbd5e1;
   font-size: 0.9rem;
 }
+
+.ssl-details,
+.status-history {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #334155;
+}
+
+.ssl-details h2,
+.status-history h2 {
+  margin-bottom: 12px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ssl-badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.ssl-badge.valid {
+  background: #166534;
+  color: #4ade80;
+}
+
+.ssl-badge.invalid {
+  background: #7f1d1d;
+  color: #fca5a5;
+}
+
+.ssl-badge.not-applicable {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+.ssl-error {
+  color: #fca5a5 !important;
+  font-size: 0.8rem !important;
+}
+
+.ssl-error.hidden {
+  display: none;
+}
+
+.status-history-ticker {
+  display: flex;
+  gap: 8px;
+}
+
+.status-history-block {
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.status-history-block.online {
+  background: #22c55e;
+}
+
+.status-history-block.degraded {
+  background: #eab308;
+}
+
+.status-history-block.offline {
+  background: #ef4444;
+}

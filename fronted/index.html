@@ -44,6 +44,17 @@
           <p><strong>HTTP Status Code:</strong> <span id="statusCode">-</span></p>
           <p><strong>Response Time:</strong> <span id="responseTime">-</span> ms</p>
           <p><strong>Last Checked:</strong> <span id="checkTime">-</span></p>
+          <section class="ssl-details" aria-label="SSL certificate details">
+            <h2>SSL certificate</h2>
+            <p><strong>Security:</strong> <span id="sslBadge" class="ssl-badge">-</span></p>
+            <p><strong>Expires in:</strong> <span id="sslExpiresInDays">-</span></p>
+            <p><strong>Issuer:</strong> <span id="sslIssuer">-</span></p>
+            <p id="sslError" class="ssl-error hidden" role="status"></p>
+          </section>
+          <section class="status-history" aria-label="Recent check history">
+            <h2>Recent check history</h2>
+            <div id="statusHistoryTicker" class="status-history-ticker" role="list"></div>
+          </section>
         </div>
       </div>
     </main>

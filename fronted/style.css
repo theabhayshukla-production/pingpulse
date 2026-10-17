@@ -76,6 +76,16 @@ button:hover {
   background: #7dd3fc;
 }
 
+.error-message {
+  color: #fca5a5;
+  font-size: 0.9rem;
+  margin: -10px 0 20px;
+}
+
+.error-message.hidden {
+  display: none;
+}
+
 .card {
   background: #0f172a;
   border: 1px solid #334155;

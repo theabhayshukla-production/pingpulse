@@ -18,11 +18,12 @@
         <input 
           type="text" 
           id="urlInput" 
-          placeholder="e.g. https://google.com or github.com" 
+          placeholder="e.g. google.com, github.com/explore, or ping google.com"
           required 
         />
         <button type="submit" id="submitBtn">Check Health</button>
       </form>
+      <p id="inputError" class="error-message hidden" role="alert"></p>
 
       <div id="resultCard" class="card hidden">
         <div class="card-header">

@@ -1,0 +1,23 @@
+name: Wake PingPulse monitor scheduler
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  run-due-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wake the PingPulse scheduler
+        env:
+          PINGPULSE_BACKEND_URL: ${{ secrets.PINGPULSE_BACKEND_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          if [ -z "$PINGPULSE_BACKEND_URL" ] || [ -z "$CRON_SECRET" ]; then
+            echo "Set PINGPULSE_BACKEND_URL and CRON_SECRET repository secrets."
+            exit 1
+          fi
+          curl --fail --silent --show-error \
+            --header "x-cron-secret: $CRON_SECRET" \
+            "$PINGPULSE_BACKEND_URL/api/cron/run"

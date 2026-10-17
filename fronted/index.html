@@ -15,11 +15,13 @@
 
     <main>
       <form id="checkForm">
-        <input 
-          type="text" 
-          id="urlInput" 
-          placeholder="e.g. google.com, github.com/explore, or ping google.com"
-          required 
+        <label class="visually-hidden" for="urlInput">Website or API URL</label>
+        <input
+          type="text"
+          id="urlInput"
+          placeholder="e.g. google.com or github.com/explore"
+          autocomplete="url"
+          required
         />
         <button type="submit" id="submitBtn">Check Health</button>
       </form>
@@ -57,9 +59,52 @@
           </section>
         </div>
       </div>
+
+      <section class="monitors-panel" aria-labelledby="monitorsHeading">
+        <div class="section-heading">
+          <div>
+            <h2 id="monitorsHeading">Monitors</h2>
+            <p>Keep an eye on your important endpoints.</p>
+          </div>
+        </div>
+        <form id="monitorAuthForm" class="monitor-auth-form">
+          <label for="monitorAccessKey">Monitor access key</label>
+          <div class="monitor-auth-controls">
+            <input type="password" id="monitorAccessKey" autocomplete="current-password" required>
+            <button type="submit" id="unlockMonitorsBtn">Unlock monitors</button>
+          </div>
+          <p id="monitorAuthMessage" class="monitor-message hidden" role="alert"></p>
+        </form>
+        <div id="monitorContent" hidden>
+          <form id="monitorForm" class="monitor-form">
+            <label>
+              <span>Monitor name</span>
+              <input type="text" id="monitorName" maxlength="120" required placeholder="Production website">
+            </label>
+            <label>
+              <span>URL</span>
+              <input type="url" id="monitorUrl" maxlength="2048" required placeholder="https://example.com">
+            </label>
+            <label>
+              <span>Check interval</span>
+              <select id="monitorInterval">
+                <option value="1">Every minute</option>
+                <option value="5" selected>Every 5 minutes</option>
+                <option value="10">Every 10 minutes</option>
+                <option value="15">Every 15 minutes</option>
+                <option value="30">Every 30 minutes</option>
+                <option value="60">Every hour</option>
+              </select>
+            </label>
+            <button type="submit" id="addMonitorBtn">Add monitor</button>
+          </form>
+          <p id="monitorMessage" class="monitor-message hidden" role="status"></p>
+          <div id="monitorList" class="monitor-list" aria-live="polite"></div>
+        </div>
+      </section>
     </main>
   </div>
 
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>

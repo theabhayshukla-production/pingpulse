@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PingPulse - API & Web Health Monitor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚡ PingPulse</h1>
+      <p>Live Website & API Health Monitor</p>
+    </header>
+
+    <main>
+      <form id="checkForm">
+        <input 
+          type="text" 
+          id="urlInput" 
+          placeholder="e.g. https://google.com or github.com" 
+          required 
+        />
+        <button type="submit" id="submitBtn">Check Health</button>
+      </form>
+
+      <div id="resultCard" class="card hidden">
+        <div class="card-header">
+          <span id="targetUrl"></span>
+          <span id="statusBadge" class="badge"></span>
+        </div>
+        <div class="card-body">
+          <p><strong>HTTP Status Code:</strong> <span id="statusCode">-</span></p>
+          <p><strong>Response Time:</strong> <span id="responseTime">-</span> ms</p>
+          <p><strong>Last Checked:</strong> <span id="checkTime">-</span></p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

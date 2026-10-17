@@ -1,6 +1,5 @@
-// REPLACE THIS URL with your deployed Render backend URL after Step 2
-const BACKEND_URL = 'http://localhost:5000'; 
-
+// Replace this with your EXACT live Render backend URL from your Render dashboard
+const BACKEND_URL = 'https://pingpulse-backend.onrender.com'
 const form = document.getElementById('checkForm');
 const urlInput = document.getElementById('urlInput');
 const submitBtn = document.getElementById('submitBtn');
